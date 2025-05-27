@@ -10,6 +10,8 @@ class DockerCompletion < Formula
     formula "docker"
   end
 
+  no_autobump! because: :requires_manual_review
+
   bottle do
     sha256 cellar: :any_skip_relocation, all: "bec711e769cdf55d0f8ffa4e470d1e0e361a3eede07f23dc10833697030aae1b"
   end
