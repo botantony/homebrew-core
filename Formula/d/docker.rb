@@ -12,6 +12,8 @@ class Docker < Formula
     regex(/^v?(\d+(?:\.\d+)+)(?:[._-]ce)?$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "f4cafb97ca3f594ca7050af4399ec3ad80584c6ea703459b76a9a4ed254e2e8b"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f4cafb97ca3f594ca7050af4399ec3ad80584c6ea703459b76a9a4ed254e2e8b"
