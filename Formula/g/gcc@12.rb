@@ -2,17 +2,15 @@ class GccAT12 < Formula
   desc "GNU compiler collection"
   homepage "https://gcc.gnu.org/"
   # TODO: Remove maximum_macos if Xcode 16 support is added to https://github.com/iains/gcc-12-branch
-  url "https://ftp.gnu.org/gnu/gcc/gcc-12.4.0/gcc-12.4.0.tar.xz"
-  mirror "https://ftpmirror.gnu.org/gcc/gcc-12.4.0/gcc-12.4.0.tar.xz"
-  sha256 "704f652604ccbccb14bdabf3478c9511c89788b12cb3bbffded37341916a9175"
+  url "https://ftp.gnu.org/gnu/gcc/gcc-12.5.0/gcc-12.5.0.tar.xz"
+  mirror "https://ftpmirror.gnu.org/gcc/gcc-12.5.0/gcc-12.5.0.tar.xz"
+  sha256 "71cd373d0f04615e66c5b5b14d49c1a4c1a08efa7b30625cd240b11bab4062b3"
   license "GPL-3.0-or-later" => { with: "GCC-exception-3.1" }
 
   livecheck do
     url :stable
     regex(%r{href=["']?gcc[._-]v?(12(?:\.\d+)+)(?:/?["' >]|\.t)}i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256                               arm64_sonoma:   "55614581a8985550c5cc84cd29f7122d4aca5d11f60c5ff119e7432419c2b9d8"
