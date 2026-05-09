@@ -1,11 +1,19 @@
 class Skalibs < Formula
   desc "Skarnet's library collection"
   homepage "https://skarnet.org/software/skalibs/"
-  url "https://skarnet.org/software/skalibs/skalibs-2.14.5.1.tar.gz"
-  sha256 "fa359c70439b480400a0a2ef68026a2736b315025a9d95df69d34601fb938f0f"
   license "ISC"
-  compatibility_version 1
   head "git://git.skarnet.org/skalibs.git", branch: "main"
+
+  stable do
+    url "https://skarnet.org/software/skalibs/skalibs-2.15.0.0.tar.gz"
+    sha256 "7fde96e8afb4191593a15328883e9c7726c96891cf071222146821e8c87f8007"
+
+    # Fix `tv_sec` overflow on macOS. Remove in the next release.
+    patch do
+      url "https://github.com/skarnet/skalibs/commit/c5d6bea6d9f98a593890f9694ef1575d744e5a32.patch?full_index=1"
+      sha256 "a0a10cd67920a76d0295bc03bbf62da8af5a82ede99f811ddac1fb8e51cfe715"
+    end
+  end
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "4eb73f6bdf652ecf3af6de5e1a5787859ee1a1a1302ad206d0002dc2025d7c0f"
