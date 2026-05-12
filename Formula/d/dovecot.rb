@@ -1,8 +1,8 @@
 class Dovecot < Formula
   desc "IMAP/POP3 server"
   homepage "https://dovecot.org/"
-  url "https://dovecot.org/releases/2.4/dovecot-2.4.3.tar.gz"
-  sha256 "e0b30330fe51e47ecfcf641bc16041184d91bdd0ac3db789b7cef54e3a75ac9b"
+  url "https://dovecot.org/releases/2.4/dovecot-2.4.4.tar.gz"
+  sha256 "670f98d55a29b02ae6a97281e51374e553b94496480ab0a07439571ab30ca8c3"
   license all_of: ["BSD-3-Clause", "LGPL-2.1-or-later", "MIT", "Unicode-DFS-2016", :public_domain]
 
   livecheck do
@@ -53,8 +53,8 @@ class Dovecot < Formula
   end
 
   resource "pigeonhole" do
-    url "https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.3.tar.gz"
-    sha256 "219c472a5fa3e6f7a6cb76ff5118bcbead73e14cd4157d3701425245756cb5f8"
+    url "https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.4.tar.gz"
+    sha256 "73c54f75359bf613c5c78e570ae98419f9295fe4451db6493e28ecb995bcd214"
 
     livecheck do
       formula :parent
