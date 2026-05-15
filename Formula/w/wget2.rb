@@ -4,7 +4,7 @@ class Wget2 < Formula
   url "https://ftpmirror.gnu.org/gnu/wget/wget2-2.2.1.tar.gz"
   sha256 "d7544b13e37f18e601244fce5f5f40688ac1d6ab9541e0fbb01a32ee1fb447b4"
   license "GPL-3.0-or-later"
-  revision 1
+  revision 2
 
   livecheck do
     url :stable
